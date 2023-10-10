@@ -1,0 +1,23 @@
+
+.restaurentImg{
+    height: 220px !important;
+    object-fit: cover;
+    transition: .3s;
+}
+.restaurentImg:hover{
+    filter: brightness(75%);
+}
+.restCard{
+    width: 18rem;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .allRestaurents {
+        padding: 10px 5px;
+        justify-content: flex-start;
+    }
+    .restCard{
+        width: 100% ;
+    }
+}

@@ -1,0 +1,15 @@
+
+.outerDiv{
+    width: 80%;
+    margin: auto;
+}
+.viewRestContainer{
+    display: flex;
+    gap: 50px;
+}
+.innerDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

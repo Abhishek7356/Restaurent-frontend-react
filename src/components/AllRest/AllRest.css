@@ -1,0 +1,16 @@
+.allRestaurents {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px 0;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .allRestaurents {
+        padding: 0px 0;
+        justify-content: flex-start;
+    }
+}

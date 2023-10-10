@@ -1,0 +1,37 @@
+
+
+1.set theme from bootwatch site
+2.import fontawsome cdn link
+3.import google font
+4.install react bootstrap - https://react-bootstrap.github.io/
+    npm install react-bootstrap bootstrap
+5.components creations
+   =>header
+    =>Header.jsx
+    =>header.css
+   =>footer
+    =>Footer.jsx
+    =>footer.css
+   =>allrest
+    =>AllRest.jsx
+    =>allRest.css   
+6.Axios
+   npm i Axios
+
+7.Restcard component for display the restaurent details as card format
+
+8.React router dom
+  npm i react-router-dom
+
+  <BrowserRouter></BrowserRouter> - To render full Application routes 
+  <Routes></Routes> - used to multiple router
+  <Route></Route> - Used for single routes
+
+9.<Link> tag - used to redirect one page to another.
+
+10.path parameter - its a value that is passed to the url
+    hook - useParams
+
+     ->React Router provides a hook, useParams(), for accessing the value 
+     of URL parameters. When called, useParams() returns an object that maps 
+     the names of URL Parameters to their values in the current URL.
