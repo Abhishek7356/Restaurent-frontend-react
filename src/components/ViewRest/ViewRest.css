@@ -1,15 +1,46 @@
 
 .outerDiv{
-    width: 80%;
+    max-width: 1300px;
     margin: auto;
 }
 .viewRestContainer{
+    max-width: 1500px;
+    margin: auto;
     display: flex;
+    justify-content: center;
     gap: 50px;
+    padding-top: 50px;
 }
 .innerDiv{
     display: flex;
-    align-items: center;
+    align-items: start;
+    gap: 20px;
     justify-content: center;
     flex-direction: column;
+}
+.vewRestImage{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .viewRestContainer{
+        flex-direction: column;
+        padding: 5px 10px;
+    }
+    .innerDiv{
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px;
+    }
+    .vewRestImage{
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
 }

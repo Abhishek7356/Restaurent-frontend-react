@@ -2,9 +2,6 @@ import React, { useEffect, useState } from 'react'
 import './ViewRest.css'
 import { useParams } from 'react-router-dom'
 import axios from 'axios';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import ListGroup from 'react-bootstrap/ListGroup';
 import Restop from '../Restop/Restop';
 import RestReview from '../RestReview/RestReview';
 
@@ -21,7 +18,7 @@ function ViewRest() {
     // console.log(id);
 
     const fetchData = async () => {
-        const response = await axios.get(`http://localhost:3001/restaurants/${id}`);
+        const response = await axios.get(`https://restaurent-backend-k0wg.onrender.com/restaurants/${id}`);
         setRestaurentDetails(response.data)
         console.log(restaurentDetails);
     }
@@ -31,22 +28,16 @@ function ViewRest() {
     }, [])
 
     return (
-        <div className='outerDiv'>
+        <div className='outerDiv bg-light shadow-lg my-5 pb-1'>
 
             <div className='viewRestContainer'>
-                {/* image */}
-                <img className='shadow' src={restaurentDetails.photograph} alt="" style={{ width: '500px', margin: '20px 0 20px 150px', height: '500px', objectFit: 'cover', borderRadius: '10px' }} />
+                <img className='shadow vewRestImage' src={restaurentDetails.photograph} alt="" />
                 <div className='innerDiv'>
-                    <ListGroup>
-                        <ListGroup.Item>Name : {restaurentDetails.name}</ListGroup.Item>
-                        <ListGroup.Item>Address : {restaurentDetails.address}</ListGroup.Item>
-                        <ListGroup.Item>Cuisine Type : {restaurentDetails.cuisine_type}</ListGroup.Item>
-                        <ListGroup.Item>Neighborhood : {restaurentDetails.neighborhood}</ListGroup.Item>
-                        <ListGroup.Item><Restop operatingHours={restaurentDetails.operating_hours} /></ListGroup.Item>
-                        {/* <ListGroup.Item><RestReview/></ListGroup.Item> */}
-                        {/* <ListGroup.Item>Name : {restaurentDetails.name}</ListGroup.Item> */}
-                    </ListGroup>
-
+                    <h3>{restaurentDetails.name}</h3>
+                    <h5>Address : {restaurentDetails.address}</h5>
+                    <h5>Cuisine Type : {restaurentDetails.cuisine_type}</h5>
+                    <h5>Neighborhood : {restaurentDetails.neighborhood}</h5>
+                    <Restop operatingHours={restaurentDetails.operating_hours} />
                 </div>
             </div>
             <RestReview reviews={restaurentDetails.reviews} />
